@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import Hamsters from './Hamsters'
 
 const Gallery = () => {
 	const [hamsters, setHamsters] = useState([])
@@ -20,19 +20,12 @@ const Gallery = () => {
 		<div>
 			{ hamsters.map(hamster => (
 
-     
+        <Hamsters hamster={hamster} key={hamster.id}/>
 				
-					<div key={hamster.id}>
-
-                    <img src={`static/assets/${hamster.imgName}`} alt={hamster.imgName} />
-                       
-					<br/>
-						{hamster.name} <br/>
-						<button> Köp! </button>
-					</div>
+			
 				))
-				
-			}
+              
+            }
 		</div>
 	)
 }
