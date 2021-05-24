@@ -12,7 +12,7 @@ const Hamsters=({hamster})=>{
 
 
 	 
-  <img src={`/static/assets/${hamster.imgName}`} alt={hamster.imgName} className="hamster-image"/>
+  <img src={`/assets/${hamster.imgName}`} alt={hamster.imgName} className="hamster-image"/>
   <p><span>{hamster.name}</span></p>
 					<p>Years: {hamster.age}</p>
 					<p>Games: {hamster.games}</p>
