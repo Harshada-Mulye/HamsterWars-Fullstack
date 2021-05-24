@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/backend/firebase-private-key.json
+
 # testing
 /coverage
 
