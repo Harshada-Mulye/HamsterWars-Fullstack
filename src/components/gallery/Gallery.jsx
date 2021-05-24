@@ -24,7 +24,7 @@ const Gallery = () => {
 				
 					<div key={hamster.id}>
 
-						<img src={`static/assets/${hamster.imgName}`} alt={hamster.imgName} />
+                    <img src={`static/assets/${hamster.imgName}`} alt={hamster.imgName} />
                        
 					<br/>
 						{hamster.name} <br/>
