@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Link, Switch, Route, NavLink, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router,  Switch, Route, NavLink } from 'react-router-dom'
 import Battle from './components/battle/Battle'
 import Gallery from './components/gallery/Gallery'
 import History from './components/history/History'

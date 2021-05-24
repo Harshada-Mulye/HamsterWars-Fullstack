@@ -6,6 +6,7 @@ const path = require('path')
 const PORT = process.env.PORT || 1339
 
 const buildFolder = path.join(__dirname, '../build')
+
 app.use((req, res, next) => {
 	console.log(`${req.method}  ${req.url} `, req.params);
 	next()
@@ -22,7 +23,7 @@ app.get('/', (req, res) => {
 })
 
 const hamstersRoute = require('./routes/hamsters')
-app.use('/api/gallery', hamstersRoute);
+app.use('/api/hamsters', hamstersRoute);
 
 // Sist: fånga alla övriga request
 // För att frontend routing ska fungera

@@ -6,7 +6,7 @@ const Gallery = () => {
 
 	useEffect(() => {
 		async function get() {
-			const response = await fetch('/api/gallery', { method: 'GET' })
+			const response = await fetch('/api/hamsters', { method: 'GET' })
 			const data = await response.json()
 			// Använd "mountedRef" här
 			setHamsters(data)
@@ -19,8 +19,16 @@ const Gallery = () => {
 	return (
 		<div>
 			{ hamsters.map(hamster => (
+
+                //<img src={´/assets/${hamster.imgName}`} alt={hamster.imgName} />
+				 // <img src={build/static/images/${hamster.imgName}´ />
+				 //<img alt="timer" src=(require{´/assets/${hamster.imgName}´})/>
+				
 					<div key={hamster.id}>
-						Bild på produkt <br/>
+
+						<img src={`static/assets/${hamster.imgName}`} alt={hamster.imgName} />
+                       
+					<br/>
 						{hamster.name} <br/>
 						<button> Köp! </button>
 					</div>
