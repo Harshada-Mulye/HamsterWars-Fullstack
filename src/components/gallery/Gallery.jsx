@@ -20,9 +20,7 @@ const Gallery = () => {
 		<div>
 			{ hamsters.map(hamster => (
 
-                //<img src={´/assets/${hamster.imgName}`} alt={hamster.imgName} />
-				 // <img src={build/static/images/${hamster.imgName}´ />
-				 //<img alt="timer" src=(require{´/assets/${hamster.imgName}´})/>
+     
 				
 					<div key={hamster.id}>
 
