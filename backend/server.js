@@ -21,6 +21,9 @@ app.get('/', (req, res) => {
 	res.send('Hello from server')
 })
 
+const hamstersRoute = require('./routes/hamsters')
+app.use('/api/gallery', hamstersRoute);
+
 // Sist: fånga alla övriga request
 // För att frontend routing ska fungera
 app.get('*', (req, res) => {
