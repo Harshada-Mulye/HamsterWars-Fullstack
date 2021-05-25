@@ -54,7 +54,7 @@ const Battle = () => {
 					<p>Losses: {hamster1.defeats}</p>
 					</div>
 		  <h1>VS</h1>
-		<div onClick={({hamster2})=>decideWinner()}>
+		<div>
 		  <img src={`/assets/${hamster2.imgName}`} alt={hamster2.imgName} className="random-image"/>
   <p><span>{hamster2.name}</span></p>
 					<p>Years: {hamster2.age}</p>
