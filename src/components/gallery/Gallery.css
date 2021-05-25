@@ -1,12 +1,59 @@
-.hamster-image{
+.hamster-image {
     width: 100%;
-	height: 25vh;
-	border-radius: 12px;
+    height: 25vh;
+    border-radius: 12px;
 }
 
 .container-list {
     margin: 9% 3em 15%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5em 1em;
+    grid-gap: 50px;
+    /*gap: 1.5em 1em;*/
+}
+
+.container-list {
+    background: lightpurple;
+    padding: 1em;
+    border-radius: 15px;
+    width: 100%;
+    height: 55vh;
+}
+
+.container-list div p {
+    margin-bottom: 0.3em;
+    font-size: 2vh;
+}
+
+.container-list span {
+    font-weight: bold;
+    display: block;
+    color: orange;
+    font-size: 1.2em;
+    margin: 1em 0 0.5em;
+}
+
+.list {
+    background: lightgreen;
+    padding: 1em;
+    border-radius: 15px;
+    width: 100%;
+    /*height: 55vh;*/
+}
+
+.container-list .list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.delete {
+    position: absolute;
+    top: 0;
+    right: 1;
+    cursor: pointer;
+}
+
+.upload {
+    float: right;
 }

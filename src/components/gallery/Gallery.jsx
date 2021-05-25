@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react'
+  
 import Hamsters from './Hamsters'
+import { useEffect, useState } from 'react'
+import Upload from './Upload'
+
 
 const Gallery = () => {
 	const [hamsters, setHamsters] = useState([])
+    
 
 	useEffect(() => {
 		async function get() {
@@ -18,14 +22,17 @@ const Gallery = () => {
 
 	return (
 		<div>
+		<h1 className ="upload">ADD YOUR HAMSTER</h1> 
+		<div className = "container-list">
 			{ hamsters.map(hamster => (
 
-        <Hamsters hamster={hamster} key={hamster.id}/>
+        <Hamsters hamster={hamster} key={hamster.id} />
 				
 			
 				))
               
             }
+		</div>
 		</div>
 	)
 }

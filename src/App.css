@@ -41,8 +41,8 @@
   nav a.active {
 	  font-weight: bold;
   }
-  main {
+ /* main {
     background-color: #B5E5D9;
     color: #3B4E49;
     flex: 1 1 auto;
-}
+}*/

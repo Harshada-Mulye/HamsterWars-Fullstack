@@ -4,14 +4,15 @@ const Hamsters=({hamster})=>{
 
    <div className="Gallery">
    <main>
- <div className="container-list">
+ <div >
 
  <div className="list">
 
 
 
+ <span role="img" className="delete"aria-label="cross">❌</span>
 
-	 
+
   <img src={`/assets/${hamster.imgName}`} alt={hamster.imgName} className="hamster-image"/>
   <p><span>{hamster.name}</span></p>
 					<p>Years: {hamster.age}</p>
