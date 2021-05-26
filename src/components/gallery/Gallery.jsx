@@ -2,7 +2,7 @@
 import Hamsters from './Hamsters'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Upload from './Upload'
+
 
 
 const Gallery = () => {

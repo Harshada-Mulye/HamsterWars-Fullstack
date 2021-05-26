@@ -1,56 +1,95 @@
 .Form{
-     display: flex; 
-     flex-direction: column; 
-  font-family: 'Indie Flower', cursive;
+	display: flex; 
+	flex-direction: column; 
+ font-family: 'Indie Flower', cursive;
+
+   font-size: 1em;
  
-    font-size: 1em;
-  
-    border-radius: 2%;
-    background-color: white;
-    color: black;
-    padding: 5em;
+   border-radius: 2%;
+   background-color: white;
+   color: black;
+   padding: 5em;
 text-align: center;
 
 
 
 }
 .Form button{
-     
-		cursor: pointer;
-		color: white;
-		background-color: black;
-		font-size: 1.5em;
-		padding-top:5px;
-		border-radius: 0.5em;
-		margin-top:2em;
-		font-family: 'Indie Flower', cursive;
-		width:20%;
-		height:50px;
-		margin: auto;
-		
-		
-	  
-  }
-  .Form button {
-	background-color: #94C2ED;
-	font-size: 1.2em;
-	border-radius: 0.5em;
-	padding: 0.5em 1.4em;
-	transition: all 1s;
+	
+	   cursor: pointer;
+	   color: white;
+	   background-color: black;
+	   font-size: 1.5em;
+	   padding-top:5px;
+	   border-radius: 0.5em;
+	   margin-top:2em;
+	   font-family: 'Indie Flower', cursive;
+	   width:20%;
+	   height:50px;
+	   margin: auto;
+	   
+	   
+	 
+ }
+ .Form button {
+   background-color: #94C2ED;
+   font-size: 1.2em;
+   border-radius: 0.5em;
+   padding: 0.5em 1.4em;
+   transition: all 1s;
 }
-  form > div {
-	margin-top: 1em;
-	margin-bottom: 2em;
+ form > div {
+   margin-top: 1em;
+   margin-bottom: 2em;
 }
-  form input {
-	font-size: 1.1em;
-	border-radius: 0.3em;
-	border-width: 3px;
-	padding-left: 0.5em;
+ form input {
+   font-size: 1.1em;
+   border-radius: 0.3em;
+   border-width: 3px;
+   padding-left: 0.5em;
 }
 
 form label {
-	font-weight: bold;
-	font-size: 0.9em;
-	padding:10px;
+   font-weight: bold;
+   font-size: 0.9em;
+   padding:10px;
+}
+input.valid{
+    border:3px solid #5BBE36;
+    border-radius: 5px;
+}
+
+input.invalid{
+    border:3px solid #DD2626;
+    border-radius: 5px;
+}
+
+.error{
+    color: #DD2626;
+}
+button.primary{
+    padding: 0.3em 1.5em;
+    margin-bottom:0.7em;
+    border: none;
+    border-radius: 5px;
+    background-color: #17736A;
+    color: white;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+button.secondary{
+    color: #17736A;
+    background-color: white;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    padding: 0.3em 1.5em;
+    margin-right:0.7em;
+    border: 2px solid #17736A;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
 }

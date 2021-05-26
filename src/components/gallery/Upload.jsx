@@ -8,7 +8,47 @@ const Upload = () => {
     const [age, setAge] = useState('');
     const [loves, setLoves] = useState('');
     const [favFood, setFavfood] = useState('');
+	const [nameTouched, setNameTouched] = useState(false)
+	const [ageTouched, setAgeTouched] = useState(false)
+	const [favoriteFoodTouched, setFavoriteFoodTouched] = useState(false)
+    const [lovesTouched, setLovesTouched] = useState(false)
+	let [nameClass, nameError] = nameTouched ? validateName(name) : ['','']
+	let [ageClass, ageError] = ageTouched ? validateAge(age) : ['','']
+    let [favoriteFoodClass, favoriteFoodError] = favoriteFoodTouched ? validateFavoriteFood(favFood) : ['','']
+    let [lovesClass, lovesError] = lovesTouched ? validateLoves(loves) : ['','']
 
+	let formIsValid = nameTouched && ageTouched && favoriteFoodTouched && lovesTouched && (nameError === '') && (ageError === '') && (favoriteFoodError === '') && (lovesError === '') 
+
+	function validateName(name){
+		if(name.length > 0){
+			return['valid' , '']
+		}else{
+			return['invalid', `What's your  hamsters name?`]
+		}
+	}
+	function validateAge(age){
+		let ageAsNumber = Number(age)
+		if(isNaN(ageAsNumber) || age ===''){
+			return['invalid', 'Whats your fab hamsters age ']
+		}else{
+			return['valid', '']
+		}
+	}
+	function validateFavoriteFood(favoriteFood){
+		if(favoriteFood.length > 0){
+			return['valid' , '']
+		}else{
+			return['invalid', `What's your fab hamsters favorite food?`]
+		}
+	}
+	
+	function validateLoves(loves){
+		if(loves.length > 0){
+			return['valid' , '']
+		}else{
+			return['invalid', `What do your fab hamsters loves?`]
+		}
+	}
 
 
     async function uploadHamster() {
@@ -40,26 +80,35 @@ const Upload = () => {
         <div>
             <main className="Form">
                 <form onSubmit={e => { e.preventDefault(); }}>
-					<div>
+					<div >
                     <label>Name</label>
-                    <input value={name} type="text" onChange={e => setName(e.target.value)} placeholder="Enter name"></input>
+                    <input value={name} type="text" onChange={e => setName(e.target.value)} placeholder="Enter name"   onBlur={() => setNameTouched(true)}
+                    className={nameClass}></input>
+					 <div className='error'>{nameError}</div>
+					
 					</div>
-					<div>
+					<div >
                     <label>Age</label>
-                    <input value={age} type="text" onChange={e => setAge(e.target.value)} placeholder="Enter age in years"></input>
+                    <input value={age} type="text" onChange={e => setAge(e.target.value)} placeholder="Enter age in years" onBlur={() => setAgeTouched(true)}
+                    className={ageClass}></input>
+					 <div className='error'>{ageError}</div>
 					</div>
-					<div>
+					<div >
                     <label>Loves</label>
 					
-					 <input value={loves} type="text" onChange={e => setLoves(e.target.value)} placeholder="What does the hamster love to do?"></input>
+					 <input value={loves} type="text" onChange={e => setLoves(e.target.value)} placeholder="What does the hamster love to do?" onBlur={() => setLovesTouched(true)}
+                    className={lovesClass}></input>
+					     <div className='error'>{lovesError}</div>
 					 </div>
-					 <div>
+					 <div >
                     <label>Favourite food</label>
-                    <input value={favFood} type="text" onChange={e => setFavfood(e.target.value)} placeholder="Enter hamsters favourite food"></input>
+                    <input value={favFood} type="text" onChange={e => setFavfood(e.target.value)} placeholder="Enter hamsters favourite food"  onBlur={() => setFavoriteFoodTouched(true)}
+                    className={favoriteFoodClass}></input>
+					<div className='error'>{favoriteFoodError}</div>
 					</div>
                 </form>
 				<br/>
-                <button onClick={e => uploadHamster()}>Add new hamster</button>
+                <button onClick={e => uploadHamster()} className='primary' disabled={!formIsValid}>Add new hamster</button>
             </main>
         </div >
     )
