@@ -38,8 +38,9 @@
 .list {
     background: lightgreen;
     padding: 1em;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
+	list-style: none;
 	
     /*height: 55vh;*/
 }
@@ -60,4 +61,7 @@
 .upload {
     float: right;
 	padding-right:70px;
+}
+ li {
+	color:red;
 }
