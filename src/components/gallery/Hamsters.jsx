@@ -2,9 +2,9 @@ import './Gallery.css'
 const Hamsters=({hamster})=>{
 	return (
 
-   <div className="Gallery">
+   <div className="Hamsters">
    <main>
- <div >
+
 
  <div className="list">
 
@@ -22,7 +22,7 @@ const Hamsters=({hamster})=>{
 					<p>Wins: {hamster.wins}</p>
 					<p>Losses: {hamster.defeats}</p>
 	</div>
-	</div>
+
 	</main>
 	</div>
 

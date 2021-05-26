@@ -1,0 +1,56 @@
+.Form{
+     display: flex; 
+     flex-direction: column; 
+  font-family: 'Indie Flower', cursive;
+ 
+    font-size: 1em;
+  
+    border-radius: 2%;
+    background-color: white;
+    color: black;
+    padding: 5em;
+text-align: center;
+
+
+
+}
+.Form button{
+     
+		cursor: pointer;
+		color: white;
+		background-color: black;
+		font-size: 1.5em;
+		padding-top:5px;
+		border-radius: 0.5em;
+		margin-top:2em;
+		font-family: 'Indie Flower', cursive;
+		width:20%;
+		height:50px;
+		margin: auto;
+		
+		
+	  
+  }
+  .Form button {
+	background-color: #94C2ED;
+	font-size: 1.2em;
+	border-radius: 0.5em;
+	padding: 0.5em 1.4em;
+	transition: all 1s;
+}
+  form > div {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+  form input {
+	font-size: 1.1em;
+	border-radius: 0.3em;
+	border-width: 3px;
+	padding-left: 0.5em;
+}
+
+form label {
+	font-weight: bold;
+	font-size: 0.9em;
+	padding:10px;
+}

@@ -1,6 +1,7 @@
   
 import Hamsters from './Hamsters'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Upload from './Upload'
 
 
@@ -21,8 +22,11 @@ const Gallery = () => {
 
 
 	return (
-		<div>
-		<h1 className ="upload">ADD YOUR HAMSTER</h1> 
+		<div className="Gallery" >
+			 <Link to='/Upload'>
+			 <h1 className ="upload">ADD YOUR HAMSTER</h1> 
+                </Link>
+	
 		<div className = "container-list">
 			{ hamsters.map(hamster => (
 

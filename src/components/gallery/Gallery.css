@@ -16,13 +16,15 @@
     background: lightpurple;
     padding: 1em;
     border-radius: 15px;
-    width: 100%;
-    height: 55vh;
+    width: 90%;
+    height: 50vh;
+    
 }
 
 .container-list div p {
-    margin-bottom: 0.3em;
+    margin-bottom: 0em;
     font-size: 2vh;
+	
 }
 
 .container-list span {
@@ -38,6 +40,7 @@
     padding: 1em;
     border-radius: 15px;
     width: 100%;
+	
     /*height: 55vh;*/
 }
 
@@ -56,4 +59,5 @@
 
 .upload {
     float: right;
+	padding-right:70px;
 }
