@@ -3,8 +3,8 @@ import './Upload.css'
 
 const Upload = () => {
     //const history = useHistory();
-   
-    const [name, setName] = useState('');
+	const [hamsterUploaded, setHamsterUploaded] = useState('');
+     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [loves, setLoves] = useState('');
     const [favFood, setFavfood] = useState('');
@@ -19,17 +19,20 @@ const Upload = () => {
 
 	let formIsValid = nameTouched && ageTouched && favoriteFoodTouched && lovesTouched && (nameError === '') && (ageError === '') && (favoriteFoodError === '') && (lovesError === '') 
 
+
+
+
 	function validateName(name){
 		if(name.length > 0){
 			return['valid' , '']
 		}else{
-			return['invalid', `What's your  hamsters name?`]
+			return['invalid', `Name is required`]
 		}
 	}
 	function validateAge(age){
 		let ageAsNumber = Number(age)
 		if(isNaN(ageAsNumber) || age ===''){
-			return['invalid', 'Whats your fab hamsters age ']
+			return['invalid', 'Age is required']
 		}else{
 			return['valid', '']
 		}
@@ -38,7 +41,7 @@ const Upload = () => {
 		if(favoriteFood.length > 0){
 			return['valid' , '']
 		}else{
-			return['invalid', `What's your fab hamsters favorite food?`]
+			return['invalid', `Favourite food is required`]
 		}
 	}
 	
@@ -46,12 +49,13 @@ const Upload = () => {
 		if(loves.length > 0){
 			return['valid' , '']
 		}else{
-			return['invalid', `What do your fab hamsters loves?`]
+			return['invalid', `Favourite thing is required`]
 		}
 	}
 
 
     async function uploadHamster() {
+	  
         const newHamster = {
        
             name: name,
@@ -64,6 +68,7 @@ const Upload = () => {
             defeats: 0
         }
 		console.log("Upload hamster",newHamster)
+		setHamsterUploaded(`Your  hamster ${name} is ready to battle!`);
 
         const url = '/api/hamsters'
         const response = await fetch(url, {
@@ -109,6 +114,7 @@ const Upload = () => {
                 </form>
 				<br/>
                 <button onClick={e => uploadHamster()} className='primary' disabled={!formIsValid}>Add new hamster</button>
+				<p className={hamsterUploaded ? '' : 'hide' }>{hamsterUploaded}</p>
             </main>
         </div >
     )
