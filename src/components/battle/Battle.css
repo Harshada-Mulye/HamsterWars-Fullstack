@@ -1,24 +1,24 @@
-.random{
-	margin: 9% 3em 15%;
+.random {
+    margin: 9% 3em 15%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
-    
-
 }
-.random h1{
-	height: 280px;
+
+.random h1 {
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.random>div{
-	background: lightgreen;
+
+.random>div {
+    background: #4BAF95;
 }
+
 .random-image {
     width: 75%;
     height: 25vh;
     border-radius: 12px;
-   margin-top: 15px;
-
+    margin-top: 15px;
 }

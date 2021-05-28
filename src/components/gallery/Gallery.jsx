@@ -1,14 +1,13 @@
   
 import Hamsters from './Hamsters'
-import { useEffect, useState } from 'react'
+//import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 
-const Gallery = () => {
-	const [hamsters, setHamsters] = useState([])
+const Gallery = ({hamsterList}) => {
+	/*const [hamsters, setHamsters] = useState([])
     
-
 	useEffect(() => {
 		async function get() {
 			const response = await fetch('/api/hamsters', { method: 'GET' })
@@ -18,7 +17,7 @@ const Gallery = () => {
 			// OBS! Bättre att hämta datan i App-komponenten, eftersom den alltid är MOUNTED
 		}
 		get()
-	}, [])
+	}, [])*/
 
 
 	return (
@@ -28,9 +27,9 @@ const Gallery = () => {
                 </Link>
 	
 		<div className = "container-list">
-			{ hamsters.map(hamster => (
+			{ hamsterList.map(hamster => (
 
-        <Hamsters hamster={hamster} key={hamster.id} />
+        <Hamsters hamster={hamster} key={hamster.id}  />
 				
 			
 				))

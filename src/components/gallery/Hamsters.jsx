@@ -8,6 +8,8 @@ const Hamsters = ({ hamster }) => {
     await fetch(`/api/hamsters/${id}`, { method: "DELETE" }).then(() =>
       setState({ status: "Delete successful" })
     );
+    
+	alert("Hamster deleted succesfully")
   }
   function changeSelect() {
     if (selectedItem) {
@@ -17,7 +19,7 @@ const Hamsters = ({ hamster }) => {
   const showHamsters = (
     <div>
       <ul className="list">
-        <li onClick={() => deleteHamster(hamster.id)}>❌</li>
+        <li className ="delete"onClick={() => deleteHamster(hamster.id)}>❌</li>
         <li>My Age: {hamster.age}</li>
         <li>My Favourite Food: {hamster.favFood}</li>
         <li>I Love : {hamster.loves}</li>
@@ -38,10 +40,9 @@ const Hamsters = ({ hamster }) => {
   );
   return (
     <div onMouseEnter={changeSelect} onMouseLeave={changeSelect}>
-      {selectedItem ? <div>{hamster.name}</div> : showImage}
+      {selectedItem ? <div className="name">{hamster.name}</div> : showImage}
     <div>{selectedItem ? showHamsters : <span></span>}</div>
     </div>
   );
 };
 export default Hamsters;
-      

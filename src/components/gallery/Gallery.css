@@ -2,6 +2,9 @@
     width: 100%;
     height: 25vh;
     border-radius: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #A8682F;
+    padding: 5px;
 }
 
 .container-list {
@@ -9,8 +12,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 50px;
-    /*gap: 1.5em 1em;*/
 }
+
+
+/*gap: 1.5em 1em;*/
 
 .container-list {
     background: lightpurple;
@@ -18,13 +23,11 @@
     border-radius: 15px;
     width: 90%;
     height: 50vh;
-    
 }
 
 .container-list div p {
     margin-bottom: 0em;
     font-size: 2vh;
-	
 }
 
 .container-list span {
@@ -36,12 +39,11 @@
 }
 
 .list {
-    background: lightgreen;
+    background: #DB873D;
     padding: 1em;
     border-radius: 10px;
     width: 100%;
-	list-style: none;
-	
+    list-style: none;
     /*height: 55vh;*/
 }
 
@@ -60,8 +62,20 @@
 
 .upload {
     float: right;
-	padding-right:70px;
+    padding-right: 70px;
 }
- li {
-	color:red;
+
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #5C4735;
+    line-height: 20px;
+}
+
+.name {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50px;
+    /*display: block;*/
+    color: rgb(20, 20, 20);
+    font-size: 1.2em;
+    margin: 1em 0 0.5em;
 }
