@@ -1,4 +1,4 @@
-.App {
+..App {
     text-align: center;
     /* min-height: 100vh;*/
     display: flex;
@@ -32,4 +32,26 @@ nav a {
     color: #3B4E49;
     transition: background-color 0.3s linear;
     text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #F5C97A;
+}
+
+
+/* nav a:active {
+    transform: translateY(-2px);
+} */
+
+nav a.active {
+    font-weight: bold;
+}
+
+main {
+    /*background-color: #B5E5D9;
+    color: #3B4E49;
+    flex: 1 1 auto;*/
+    overflow: auto;
+    background-image: url("../src/backgroundimage.png");
+    background-repeat: repeat-y;
 }

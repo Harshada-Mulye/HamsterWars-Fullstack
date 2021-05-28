@@ -8,6 +8,11 @@ const PORT = process.env.PORT || 1339
 const buildFolder = path.join(__dirname, '../build')
 
 app.use((req, res, next) => {
+	if(req.url.startsWith("/assets"))
+	{
+
+	}
+	else
 	console.log(`${req.method}  ${req.url} `, req.params);
 	next()
 })

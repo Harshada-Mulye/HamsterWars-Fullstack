@@ -1,8 +1,8 @@
 .random {
-    margin: 9% 3em 15%;
+    margin: 6% 10em 9%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 10px;
 }
 
 .random h1 {
@@ -12,13 +12,55 @@
     align-items: center;
 }
 
-.random>div {
-    background: #4BAF95;
-}
+
+/*.random>div {
+    background: #f3f5f4;
+}*/
 
 .random-image {
     width: 75%;
-    height: 25vh;
+    height: 35vh;
     border-radius: 12px;
     margin-top: 15px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #A8682F;
+    padding: 5px;
+}
+
+span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', sans-serif;
+    color: #111111;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.vote {
+    font-family: cursive;
+    color: #111111;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 50px;
+}
+
+.battleButton {
+    float: none;
+    padding-right: 70px;
+}
+
+.result-box {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1em auto 1em auto;
+    color: rgb(0, 0, 0);
+    height: 10em;
+    width: 15em;
+    align-self: center;
+    border-radius: 2.5em;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: rgba(87, 255, 255, 0.842);
+    line-height: 0.1px;
 }
