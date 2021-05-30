@@ -1,5 +1,5 @@
 import React from 'react';
-//import './battleResult.css';
+import './BattleResult.css';
 
 
 const BattleResult = ({winner,loser}) => {
@@ -8,9 +8,13 @@ const BattleResult = ({winner,loser}) => {
         
         <div className="result-box">
             
-                <p>Winner:{winner.name},Games:{winner.games}</p>
-                
-                <p>loser:{loser.name},Games:{loser.games} </p>
+                <p className="battleheading" >Winner:{winner.name}</p>
+               
+                <p>Games:{winner.games},wins:{winner.wins},Defeats:{winner.defeats}</p>
+                 <br/>
+                <p className= "battleheading">loser:{loser.name} </p>
+              
+                <p>Games:{loser.games},wins:{loser.wins},Defeats:{loser.defeats}</p>
                 
 
             </div>

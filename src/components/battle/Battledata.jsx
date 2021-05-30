@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import BattleResult from './BattleResult'
 import {  useState } from 'react'
 
-const Battledata =({hamster1,hamster2}) =>{
+const Battledata =({hamster1,hamster2,fetchData}) =>{
 	const [winningHamster, setWinningHamster] = useState("");
     const [losingHamster, setLosingHamster] = useState("");
 	const [showPopUp, setShowPopUp] = useState(false);
@@ -47,12 +47,14 @@ async function postMatch(winnerId, loserId) {
 	}
 	function popUp() {
         setShowPopUp(true);
-        setTimeout(setShowPopUp, 7000);
+       // setTimeout(setShowPopUp, 8000);
     }
 	
 
     return(
+		<main>
 		<section className="wrapper">
+
          <p className= "vote">Vote for the cutest hamster</p>
 		<section className="random">
 			
@@ -68,6 +70,7 @@ async function postMatch(winnerId, loserId) {
 					<p>Wins: {hamster1.wins}</p>
 	<p>Losses: {hamster1.defeats}</p>*/}
             </div>
+
 		  <h1>VS</h1>
 		<div onClick={() => hamsterVote(hamster2, hamster1)}>
 		<p><span>{hamster2.name}</span></p>
@@ -82,17 +85,21 @@ async function postMatch(winnerId, loserId) {
 
         </div>
 		
+		
             {
                 winningHamster && showPopUp
                     ? <BattleResult winner={winningHamster} loser={losingHamster} />
                     : ""
             }
+			
+		  </section>
+		  <div className="buttonwrapper">
 		<Link to='/Battle'>
-			 <button className ="battleButton">ADD YOUR HAMSTER</button> 
+			 <p onClick={()=>fetchData()}>Next Battle</p> 
                 </Link>
+				</div>
 		  </section>
-		  </section>
-          
+          </main>
     )
 
 

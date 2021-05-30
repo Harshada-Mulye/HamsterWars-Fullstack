@@ -1,0 +1,36 @@
+.result-box {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0.3em auto 0.5em auto;
+    color: rgb(0, 0, 0);
+    height: 15em;
+    width: 15em;
+    align-items: center;
+    align-self: center;
+    border-radius: 175px;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: #f8cba4;
+    line-height: 5px;
+    margin-top: 10px;
+}
+
+.battleheading {
+    color: #f80707;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.battleimage img {
+    width: 40%;
+    height: 20vh;
+    border-radius: 12px;
+    margin-top: 2px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #A8682F;
+    padding: 5px;
+}

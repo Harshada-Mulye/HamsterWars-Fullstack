@@ -1,8 +1,9 @@
 .random {
-    margin: 6% 10em 9%;
+    margin: 5% 10em 9%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
+    margin-bottom: auto;
 }
 
 .random h1 {
@@ -23,7 +24,7 @@
     border-radius: 12px;
     margin-top: 15px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: #A8682F;
+    background-color: #f07e0e;
     padding: 5px;
 }
 
@@ -39,28 +40,28 @@ span {
     color: #111111;
     font-weight: 700;
     font-size: 1.2em;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
-.battleButton {
-    float: none;
-    padding-right: 70px;
-}
-
-.result-box {
+.buttonwrapper {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
-    position: absolute;
+    /*position: relative;*/
     left: 0;
     right: 0;
     margin: 1em auto 1em auto;
-    color: rgb(0, 0, 0);
-    height: 10em;
-    width: 15em;
+    /*margin-left: 30em;
+    margin-right: 100px;*/
+    color: #D62400;
+    /*height: 5em;*/
+    width: 12em;
     align-self: center;
     border-radius: 2.5em;
     border: 1px solid rgb(0, 0, 0);
     outline: none;
-    background-color: rgba(87, 255, 255, 0.842);
-    line-height: 0.1px;
+    background-color: #da5b19;
+}
+
+Link {
+    text-decoration: none;
 }
