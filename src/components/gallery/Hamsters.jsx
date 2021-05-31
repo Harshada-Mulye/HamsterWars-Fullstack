@@ -3,7 +3,8 @@ import { useState } from "react";
 const Hamsters = ({ hamster }) => {
   const [state, setState] = useState("");
   const [selectedItem, setSelectedItem] = useState("");
-
+  const [winnerhamsters, setWinnerHamsters] = useState([])
+  const [message,setMessage]=useState("")
   async function deleteHamster(id) {
     await fetch(`/api/hamsters/${id}`, { method: "DELETE" }).then(() =>
       setState({ status: "Delete successful" })
@@ -11,6 +12,28 @@ const Hamsters = ({ hamster }) => {
     
 	alert("Hamster deleted succesfully")
   }
+
+  async function matchWinners(id) {
+	const response = await fetch(`/api/matchWinners/${id}`, { method: 'GET' })
+	
+	const text = await response.text()
+	try{
+		const data=JSON.parse(text)
+		setWinnerHamsters(data)
+ console.log(winnerhamsters)
+	}
+	catch{
+		console.log("Hamster has not won any matches yet..")
+		setMessage("Hamster has not won any match yet")
+  
+   }
+ 
+
+
+}
+
+
+
   function changeSelect() {
     if (selectedItem) {
       setSelectedItem("");
@@ -18,7 +41,7 @@ const Hamsters = ({ hamster }) => {
   }
   const showHamsters = (
     <div>
-      <ul className="list">
+      <ul className="list" 	onClick={()=>matchWinners(hamster.id)}>
         <li className ="delete"onClick={() => deleteHamster(hamster.id)}>❌</li>
         <li>My Age: {hamster.age}</li>
         <li>My Favourite Food: {hamster.favFood}</li>
@@ -26,6 +49,8 @@ const Hamsters = ({ hamster }) => {
         <li>
           wins: {hamster.wins} games {hamster.games} defeats {hamster.defeats}
         </li>
+	<li> Defetaers {winnerhamsters.map(hamster=>"\n Id:"+hamster.loserId) }</li>
+	<li>{message}</li>
       </ul>
     </div>
   );
@@ -35,6 +60,7 @@ const Hamsters = ({ hamster }) => {
         src={`/assets/${hamster.imgName}`}
         alt={hamster.name}
         className="hamster-image"
+	
       />
     </div>
   );

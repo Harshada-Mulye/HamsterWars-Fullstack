@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin-bottom: auto;
+
 }
 
 .random h1 {
@@ -22,7 +23,7 @@
     width: 75%;
     height: 35vh;
     border-radius: 12px;
-    margin-top: 15px;
+    margin-top: 12px;
     border: 1px solid rgb(255, 255, 255);
     background-color: #f07e0e;
     padding: 5px;
@@ -35,33 +36,57 @@ span {
     font-size: 1.2em;
 }
 
+
+
+
+
+Link {
+    text-decoration: none;
+}
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	height:100vh;
+	overflow: hidden;
+	
+}
 .vote {
     font-family: cursive;
     color: #111111;
     font-weight: 700;
-    font-size: 1.2em;
-    margin-top: 30px;
-}
+    font-size: 1.4em;
+ 
+	margin: auto;
+	padding-top: 12px;
 
+}
 .buttonwrapper {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1em;
     /*position: relative;*/
-    left: 0;
-    right: 0;
-    margin: 1em auto 1em auto;
+ 
+    
     /*margin-left: 30em;
     margin-right: 100px;*/
     color: #D62400;
     /*height: 5em;*/
     width: 12em;
-    align-self: center;
+
+	
     border-radius: 2.5em;
     border: 1px solid rgb(0, 0, 0);
     outline: none;
     background-color: #da5b19;
+    display: flex;
+	align-items: center;
+	
+	flex-direction: column;
+  align-items: center;
+  margin:auto;
+  margin-top: 40px;
+ 
+	
 }
-
-Link {
-    text-decoration: none;
+.buttonwrapper p{
+text-align: center;
 }

@@ -47,7 +47,7 @@ async function postMatch(winnerId, loserId) {
 	}
 	function popUp() {
         setShowPopUp(true);
-       // setTimeout(setShowPopUp, 8000);
+      // setTimeout(setShowPopUp, 7000);
     }
 	
 
@@ -84,7 +84,7 @@ async function postMatch(winnerId, loserId) {
 <p>Losses: {hamster2.defeats}</p>*/}
 
         </div>
-		
+	
 		
             {
                 winningHamster && showPopUp
@@ -92,12 +92,14 @@ async function postMatch(winnerId, loserId) {
                     : ""
             }
 			
-		  </section>
+			
+			</section>
 		  <div className="buttonwrapper">
 		<Link to='/Battle'>
 			 <p onClick={()=>fetchData()}>Next Battle</p> 
                 </Link>
 				</div>
+		 
 		  </section>
           </main>
     )

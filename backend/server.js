@@ -33,6 +33,9 @@ app.use('/api/hamsters', hamstersRoute);
 const matchesRoute = require('./routes/matches')
 app.use('/api/matches', matchesRoute);
 
+const matcheWinnersRoute = require('./routes/matchWinners')
+app.use('/api/matchWinners', matcheWinnersRoute);
+
 // Sist: fånga alla övriga request
 // För att frontend routing ska fungera
 app.get('*', (req, res) => {
