@@ -5,6 +5,7 @@ const Hamsters = ({ hamster }) => {
   const [selectedItem, setSelectedItem] = useState("");
   const [winnerhamsters, setWinnerHamsters] = useState([])
   const [message,setMessage]=useState("")
+  const[hamsterInfo,setHamsterInfo]=useState("")
   async function deleteHamster(id) {
     await fetch(`/api/hamsters/${id}`, { method: "DELETE" }).then(() =>
       setState({ status: "Delete successful" })
@@ -20,17 +21,26 @@ const Hamsters = ({ hamster }) => {
 	try{
 		const data=JSON.parse(text)
 		setWinnerHamsters(data)
- console.log(winnerhamsters)
+     console.log(winnerhamsters)
 	}
 	catch{
 		console.log("Hamster has not won any matches yet..")
 		setMessage("Hamster has not won any match yet")
   
-   }
- 
+   }  
 
+  /*const hamster1= winnerhamsters.map(hamster=>hamster.loserId)
+  console.log(hamster1)
+  let response1 = await fetch(`/api/hamsters/${hamster1}`, { method: 'GET' });   
 
-}
+                const hamster = await response1.json();                
+               
+               
+                setHamsterInfo(hamster)
+				console.log(hamster)
+
+   console.log(hamsterInfo)*/
+ }
 
 
 
@@ -41,7 +51,7 @@ const Hamsters = ({ hamster }) => {
   }
   const showHamsters = (
     <div>
-      <ul className="list" 	onClick={()=>matchWinners(hamster.id)}>
+      <ul className="list" 	onMouseEnter={()=>matchWinners(hamster.id)}>
         <li className ="delete"onClick={() => deleteHamster(hamster.id)}>❌</li>
         <li>My Age: {hamster.age}</li>
         <li>My Favourite Food: {hamster.favFood}</li>

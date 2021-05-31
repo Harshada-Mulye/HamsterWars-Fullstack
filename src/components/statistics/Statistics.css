@@ -1,0 +1,21 @@
+.statWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding: auto;
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+ul {
+    border-radius: 2.5em;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    line-height: 10px;
+    height: 50vh;
+}

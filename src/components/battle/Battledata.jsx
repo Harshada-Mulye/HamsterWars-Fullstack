@@ -18,14 +18,21 @@ const Battledata =({hamster1,hamster2,fetchData}) =>{
 				defeats: loser.defeats + 1,
 				games: loser.games + 1 
 			}
-			updateHamster(winner.id, winnerUpdate);
-			updateHamster(loser.id, loserUpdate);
-			postMatch(winner.id, loser.id);
+			Promise.all([
+			updateHamster(winner.id, winnerUpdate),
+			updateHamster(loser.id, loserUpdate),
+			postMatch(winner.id, loser.id),
+			
+		]).then(() => {
+			console.log("Winner loser updated")
 			setWinningHamster(winner)
         setLosingHamster(loser)
+		popUp();
+			
 		
 			
-		}
+	})
+}
 	
 
 	async function updateHamster(id, hamsterChange) {
@@ -43,11 +50,12 @@ async function postMatch(winnerId, loserId) {
 			'Content-type': 'application/json'}, body: JSON.stringify(match)});
 		const Data1 = await Response1.text();
 		console.log(Data1);
-		popUp();
+		
 	}
 	function popUp() {
+	
         setShowPopUp(true);
-      // setTimeout(setShowPopUp, 7000);
+      setTimeout(setShowPopUp, 7000);
     }
 	
 
@@ -87,7 +95,7 @@ async function postMatch(winnerId, loserId) {
 	
 		
             {
-                winningHamster && showPopUp
+                winningHamster && losingHamster&&showPopUp
                     ? <BattleResult winner={winningHamster} loser={losingHamster} />
                     : ""
             }
@@ -96,7 +104,8 @@ async function postMatch(winnerId, loserId) {
 			</section>
 		  <div className="buttonwrapper">
 		<Link to='/Battle'>
-			 <p onClick={()=>fetchData()}>Next Battle</p> 
+			 <p onClick={()=>{fetchData();
+			 setShowPopUp(false)}}>Next Battle</p> 
                 </Link>
 				</div>
 		 

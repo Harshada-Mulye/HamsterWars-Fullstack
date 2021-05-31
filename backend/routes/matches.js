@@ -20,6 +20,7 @@ router.get("/:id", async (req, res) => {
   res.send(item);
 });
 
+
 router.post("/", async (req, res) => {
   const obj = req.body;
   if (!obj.winnerId || !obj.loserId) {
@@ -47,4 +48,7 @@ router.delete("/:id", async (req, res) => {
   const docRef = await getDatabase.deleteFromCollection("matches", id)
   res.sendStatus(docRef)
 });
+
+
+
 module.exports = router
