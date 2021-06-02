@@ -1,0 +1,47 @@
+.history-wrapper {
+    
+	display: flex;
+  justify-content: space-between;
+	width:50%;
+}
+
+.history-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: .25px solid rgb(255, 255, 255);
+    background-color: #A8682F;
+    padding: 5px;
+	margin:auto;
+}
+
+.VSclass {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.deleteMatch {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+	margin-top: 30px;
+}
+.historyUl{
+	display: grid;
+	grid-template-columns: 2fr;
+
+}
+.lidelete{
+	margin-top:33px;
+	margin-bottom: 10px;
+	margin-left:20px;
+}
+li.hamname{
+	margin:auto;
+	align-items: center;
+	margin-top: 2px;
+}

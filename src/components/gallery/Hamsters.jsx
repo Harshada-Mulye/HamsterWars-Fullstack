@@ -1,15 +1,14 @@
 import "./Gallery.css";
 import { useState } from "react";
 const Hamsters = ({ hamster }) => {
-  const [state, setState] = useState("");
+
   const [selectedItem, setSelectedItem] = useState("");
   const [winnerhamsters, setWinnerHamsters] = useState([])
   const [message,setMessage]=useState("")
   //const[hamsterInfo,setHamsterInfo]=useState([])
   async function deleteHamster(id) {
-    await fetch(`/api/hamsters/${id}`, { method: "DELETE" }).then(() =>
-      setState({ status: "Delete successful" })
-    );
+    await fetch(`/api/hamsters/${id}`, { method: "DELETE" })
+    
     
 	alert("Hamster deleted succesfully")
   }
@@ -28,32 +27,13 @@ const Hamsters = ({ hamster }) => {
 		setMessage("Hamster has not won any match yet")
   
    }  
+   
+
+  }
 
 
-   const hamster1= winnerhamsters.map(hamster=>hamster.loserId)
-    console.log(hamster1)
-    
-
-     
 
 
-}
-
-async function getHamsterWithId(id)
-{
-  let response1 = await fetch(`/api/hamsters/${id}`, { method: 'GET' });   
-
-                const hamster = await response1.json();                
-               
-               
-               
-				console.log(hamster)
-
-				
-            
-       
-
- }
 
   
 

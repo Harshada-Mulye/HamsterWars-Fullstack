@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Hamsters from "../gallery/Hamsters";
+
+import './History.css'
 
 const History = ({hamsters}) => {
   const [latestmatches, setLatestMatches] = useState([]);
@@ -16,6 +17,7 @@ const History = ({hamsters}) => {
 		setLatestMatches(data.slice(Math.max(data.length - 5, 0)));
 	  }
     getMatches();
+   
   }, []);
 
   
@@ -48,27 +50,36 @@ const History = ({hamsters}) => {
 	let losersInfo=[];
 
 	losersInfo=hamsters.filter((hamster)=>tempLoserId.includes(hamster.id))
+  async function deleteMatch(id) {
+    await fetch(`/api/matches/${id}`, { method: "DELETE" })
     
+    
+	alert(" deleted succesfully")
+ 
+  }
+
 
 
  
   return (
    
-      <div>
+      <section>
         <h1>Latest Matches</h1>
-		<div class="history-wrapper">
+		<div className="history-wrapper">
 			<div>
-        <ul>
+        <h1>WINNER</h1>
+        <ul className= "historyUl">
 
 
 		      {winnersInfo.map((match) => {
             return (
-              <li key={match.id}>
-                Winner name- {match.name} 
+              <li className="hamname" key={match.id}>
+               
+               {match.name} 
 				<img
         src={`/assets/${match.imgName}`}
         alt={match.name}
-        className="hamster-image"
+        className="history-image"
 	 
       />
 	  
@@ -78,18 +89,22 @@ const History = ({hamsters}) => {
 		  }
         </ul>
 		</div>
+    <div className ="VSclass"><h1>VS</h1></div>
+
+
+
 		<div>
-		<ul>
-
-
+    <h1>LOSER</h1>
+		<ul className="historyUl" >
 {losersInfo.map((match) => {
 return (
 <li key={match.id}>
-  loser name- {match.name} 
+
+{match.name} 
   <img
         src={`/assets/${match.imgName}`}
         alt={match.name}
-        className="hamster-image"
+        className="history-image"
 	
       />
 	  
@@ -99,8 +114,26 @@ return (
 }
 </ul>
 </div>
+<div>
+<ul >
+
+
+		      {latestmatches.map((match) => {
+            return (
+              <li key={match.id} className="lidelete">
+             
+             
+               <span className="deleteCross" onClick={() => deleteMatch(match.id)}>❌</span>
+	  
+              </li>
+            );
+          })
+		  }
+        </ul>
+
       </div>
     </div>
+    </section>
 
   );
 };
