@@ -15,6 +15,7 @@ li {
     text-align: center;
     line-height: 50px;
     color: #f07e0e;
+	font-family: Margarine;
 }
 
 ul {
@@ -39,4 +40,5 @@ h1 {
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
+	font-family: Margarine;
 }

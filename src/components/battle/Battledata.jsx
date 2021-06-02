@@ -9,7 +9,10 @@ const Battledata =({hamster1,hamster2,fetchData}) =>{
 	const [showPopUp, setShowPopUp] = useState(false);
 	
 	async function hamsterVote(winner, loser){
-		
+
+		if (hamster1.id === hamster2.id) {
+			fetchData()
+		}
 			const winnerUpdate= {
 				wins: winner.wins + 1,
 				games: winner.games + 1
@@ -63,7 +66,7 @@ async function postMatch(winnerId, loserId) {
 		<main>
 		<section className="wrapper">
 
-         <h1 className="vote">Vote for the cutest hamster</h1>
+         <h1 className="vote">VOTE FOR CUTEST HAMSTER</h1>
 		<section className="random">
 			
 			 <div onClick={() => hamsterVote(hamster1, hamster2)}>

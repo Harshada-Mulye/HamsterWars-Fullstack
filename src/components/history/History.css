@@ -1,8 +1,14 @@
 .history-wrapper {
     
 	display: flex;
-  justify-content: space-between;
-	width:50%;
+  /*justify-content: space-between;*/
+  justify-content: space-evenly;
+	width:100%;
+	height:100vh;
+	align-items: center;
+	margin-top: -40px;
+	
+
 }
 
 .history-image {
@@ -34,14 +40,29 @@
 	display: grid;
 	grid-template-columns: 2fr;
 
+	
+
 }
 .lidelete{
-	margin-top:33px;
-	margin-bottom: 10px;
+	margin-top:37px;
+	margin-bottom: 15px;
 	margin-left:20px;
 }
 li.hamname{
-	margin:auto;
+	
 	align-items: center;
-	margin-top: 2px;
+	font-family: Margarine;
+
+}
+.latestMatches{
+
+	margin-top: 50px;
+margin-bottom: 0px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.historyUl li{
+	border-bottom: 5px solid red;
+
 }

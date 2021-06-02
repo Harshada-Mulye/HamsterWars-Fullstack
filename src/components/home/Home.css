@@ -21,4 +21,12 @@
 
 .home-container p {
     font-size: 1em;
+	font-family: Margarine;
+}
+
+.home-main h1{
+	font-family: Margarine;
+}
+.home-main h2{
+	font-family: Margarine;
 }

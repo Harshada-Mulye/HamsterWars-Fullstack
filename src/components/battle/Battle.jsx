@@ -55,6 +55,7 @@ const Battle = () => {
 	
 		setHamster1(data);
 		setHamster2(data1);
+		
 
 	   
 	   }
@@ -81,7 +82,7 @@ const Battle = () => {
            
             </div>
          :
-			<p>"no data"</p>
+			<p>"Loading...."</p>
 		}
 
 		</div>

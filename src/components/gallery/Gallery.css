@@ -63,19 +63,26 @@
 .upload {
     float: right;
     padding-right: 70px;
+	font-family: Margarine;
 }
 
 .list li {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Margarine;
     color: #5C4735;
     line-height: 20px;
 }
 
 .name {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: Margarine;
     font-weight: 50px;
     /*display: block;*/
     color: rgb(20, 20, 20);
     font-size: 1.2em;
     margin: 1em 0 0.5em;
+	background-image: linear-gradient(to left, violet, indigo, green, blue, rgb(27, 27, 18), orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+	
 }

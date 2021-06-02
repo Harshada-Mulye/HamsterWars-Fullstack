@@ -8,6 +8,7 @@ import History from './components/history/History'
 import Statistics from './components/statistics/Statistics'
 import Home from './components/home/Home'
 import Upload from './components/gallery/Upload';
+import Footer from './components/footer/Footer'
 
 function App() {
   const [hamsters, setHamsters] = useState([])
@@ -49,6 +50,9 @@ function App() {
                     <Route path="/"> <Home /></Route>
                 </Switch>
             </main>
+			<div className="footer">
+		  <Footer />
+	  </div>
     </div>
     </Router>
   );

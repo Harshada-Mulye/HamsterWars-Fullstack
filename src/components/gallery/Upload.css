@@ -9,7 +9,7 @@
     flex-direction: column;
     width: 30%;
     height: 80vh;
-    font-family: 'Indie Flower', cursive;
+    font-family: Margarine;
     font-size: 1em;
     border-radius: 2%;
     border: 2px solid #A8682F;
@@ -33,7 +33,7 @@
     padding-top: 5px;
     border-radius: 0.5em;
     margin-top: 2em;
-    font-family: 'Indie Flower', cursive;
+	font-family: Margarine;
     width: 50%;
     height: 50px;
     margin: auto;
@@ -88,10 +88,10 @@ button.primary {
     margin-bottom: 0.7em;
     border: none;
     border-radius: 5px;
-    background-color: #17736A;
+    background-color:#A8682F;
     color: white;
     font-size: 1em;
-    font-family: 'Raleway', sans-serif;
+	font-family: Margarine;
 }
 
 button:hover {
@@ -100,7 +100,7 @@ button:hover {
 }
 
 button:disabled {
-    background-color: #2d4643;
+    background-color: #f07e0e;
     color: #f7efef;
     cursor: auto;
 }

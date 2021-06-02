@@ -1,4 +1,4 @@
-..App {
+.App {
     text-align: center;
     /* min-height: 100vh;*/
     display: flex;
@@ -14,6 +14,7 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+
 }
 
 .App-link {
@@ -25,6 +26,7 @@ header {
     color: #3B4E49;
     padding: 0.5em;
     flex: 0 0 auto;
+
 }
 
 nav a {
@@ -32,6 +34,8 @@ nav a {
     color: #3B4E49;
     transition: background-color 0.3s linear;
     text-decoration: none;
+	font-family: Margarine;
+	
 }
 
 nav a:hover {
