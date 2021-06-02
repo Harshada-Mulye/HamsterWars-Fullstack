@@ -5,24 +5,17 @@
     left: 0;
     right: 0;
     margin: 0.5em auto 0.5em auto;
-	margin-bottom: 10px;
-
     color: rgb(0, 0, 0);
-    height: 25em;
+    height: 8em;
     width: 15em;
-    border-radius: 175px;
-    border: 1px solid rgb(0, 0, 0);
+    align-items: center;
+    align-self: center;
+    /*border-radius: 175px;*/
+    border: 3px solid #A8682F;
     outline: none;
-    background-color: #f8cba4;
+    /*background-color: #f07e0e;*/
     line-height: 5px;
-
-
-	margin:auto;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	align-self: center;
-
+    margin-top: 10px;
 }
 
 .battleheading {
@@ -30,18 +23,14 @@
     font-family: arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
-	
 }
 
 .battleimage img {
-    width: 35%;
-    height: 12vh;
+    width: 40%;
+    height: 20vh;
     border-radius: 12px;
     margin-top: 2px;
     border: 1px solid rgb(255, 255, 255);
     background-color: #A8682F;
     padding: 5px;
-
-display: flex;
-margin: auto;
 }

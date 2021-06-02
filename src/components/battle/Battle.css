@@ -1,10 +1,11 @@
+
+
 .random {
     margin: 5% 10em 9%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     margin-bottom: auto;
-
 }
 
 .random h1 {
@@ -23,7 +24,7 @@
     width: 75%;
     height: 35vh;
     border-radius: 12px;
-    margin-top: 12px;
+    margin-top: 15px;
     border: 1px solid rgb(255, 255, 255);
     background-color: #f07e0e;
     padding: 5px;
@@ -37,11 +38,60 @@ span {
 }
 
 
+/*.vote {
+    font-family: cursive;
+    color: #111111;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 30px;
+}*/
 
+.buttonwrapper {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    /*position: relative;*/
+    left: 0;
+    right: 0;
+    margin: 1em auto 1em auto;
+    /*margin-left: 30em;
+    margin-right: 100px;*/
+    color: #D62400;
+    /*height: 5em;*/
+    width: 7em;
+    align-self: center;
+    border-radius: 2.5em;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background-color: #f07e0e;
+}
 
-
-Link {
+nav a {
+    padding: 0.2em 1em;
+    color: #3B4E49;
+    transition: background-color 0.3s linear;
     text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+.glove1 {
+    transform: rotate(90deg);
+}
+
+.glove2 {
+    transform: rotate(270deg)
+}
+
+.buttonwrapper p {
+   
+
+	margin-top:20px;
+	margin-left:15px;
+}
+.vsclass{
+	margin-top: 50px;
 }
 .wrapper{
 	display: flex;
@@ -50,43 +100,6 @@ Link {
 	overflow: hidden;
 	
 }
-.vote {
-    font-family: cursive;
-    color: #111111;
-    font-weight: 700;
-    font-size: 1.4em;
- 
-	margin: auto;
-	padding-top: 12px;
-
-}
-.buttonwrapper {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1em;
-    /*position: relative;*/
- 
-    
-    /*margin-left: 30em;
-    margin-right: 100px;*/
-    color: #D62400;
-    /*height: 5em;*/
-    width: 12em;
-
-	
-    border-radius: 2.5em;
-    border: 1px solid rgb(0, 0, 0);
-    outline: none;
-    background-color: #da5b19;
-    display: flex;
-	align-items: center;
-	
-	flex-direction: column;
-  align-items: center;
-  margin:auto;
-  margin-top: 40px;
- 
-	
-}
-.buttonwrapper p{
-text-align: center;
+.vote{
+	margin:auto;
 }

@@ -55,7 +55,7 @@ async function postMatch(winnerId, loserId) {
 	function popUp() {
 	
         setShowPopUp(true);
-      setTimeout(setShowPopUp, 7000);
+    //  setTimeout(setShowPopUp, 7000);
     }
 	
 
@@ -63,7 +63,7 @@ async function postMatch(winnerId, loserId) {
 		<main>
 		<section className="wrapper">
 
-         <p className= "vote">Vote for the cutest hamster</p>
+         <h1 className="vote">Vote for the cutest hamster</h1>
 		<section className="random">
 			
 			 <div onClick={() => hamsterVote(hamster1, hamster2)}>
@@ -79,7 +79,7 @@ async function postMatch(winnerId, loserId) {
 	<p>Losses: {hamster1.defeats}</p>*/}
             </div>
 
-		  <h1>VS</h1>
+			<h1 className ="vsclass"><span className ="glove1">🥊</span>VS <span className ="glove2">🥊</span></h1>
 		<div onClick={() => hamsterVote(hamster2, hamster1)}>
 		<p><span>{hamster2.name}</span></p>
 		   <img src={`/assets/${hamster2.imgName}`} alt={hamster2.imgName} className="random-image"/>
@@ -103,10 +103,12 @@ async function postMatch(winnerId, loserId) {
 			
 			</section>
 		  <div className="buttonwrapper">
+			  <nav>
 		<Link to='/Battle'>
 			 <p onClick={()=>{fetchData();
 			 setShowPopUp(false)}}>Next Battle</p> 
                 </Link>
+				</nav>
 				</div>
 		 
 		  </section>

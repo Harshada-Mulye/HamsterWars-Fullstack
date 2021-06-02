@@ -65,7 +65,7 @@
     padding-right: 70px;
 }
 
-li {
+.list li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #5C4735;
     line-height: 20px;

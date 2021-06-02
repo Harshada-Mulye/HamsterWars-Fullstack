@@ -1,7 +1,7 @@
 
 import './App.css';
 import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Link, Switch, Route, NavLink, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router,Switch, Route, NavLink } from 'react-router-dom'
 import Battle from './components/battle/Battle'
 import Gallery from './components/gallery/Gallery'
 import History from './components/history/History'
@@ -44,7 +44,7 @@ function App() {
                     <Route path="/battle"> <Battle /></Route>
                     <Route path="/gallery"> <Gallery hamsterList={hamsters} /></Route>
                     <Route path="/stats"> <Statistics /></Route> 
-                    <Route path="/history"> <History/></Route>
+                    <Route path="/history"> <History hamsters={hamsters}/></Route>
                     <Route path="/upload"> <Upload/></Route>
                     <Route path="/"> <Home /></Route>
                 </Switch>

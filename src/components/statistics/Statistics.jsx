@@ -28,28 +28,33 @@ const Statistics = () => {
   
  return (
   <div className = "statWrapper">
-    <div><h1>Top five winners</h1>
+    <div><h1><span>🏆</span>Top five winners</h1>
+   
    <ul>
   {winners.map(winner=> {
     return (
       <li key={winner.id}>
-        {winner.name} has won        {winner.wins} 
+        <span>{winner.name}</span> has won      <span>{winner.wins} </span>  matches
       </li>
     )
   })}
 </ul>
+
    </div>
-    <div><h1>Top five losers</h1>
+   <div className ="divider"> </div>
+    <div><h1><span>😞</span>Top five losers</h1>
+   
     <ul>
   {losers.map(loser=> {
     return (
       <li key={loser.id}>
-        {loser.name} has lost      {loser.defeats} 
+       <span> {loser.name} </span>has lost      <span>{loser.defeats}</span> matches
       </li>
     )
   })}
 </ul>
-      </div>
+</div>
+     
     
 
   </div>

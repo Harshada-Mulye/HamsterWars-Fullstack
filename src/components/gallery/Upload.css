@@ -1,72 +1,91 @@
-.Form{
-	display: flex; 
-	flex-direction: column; 
- font-family: 'Indie Flower', cursive;
- width:30%;
- margin:auto;
-   font-size: 1em;
- 
-   border-radius: 2%;
-   background-color: white;
-   color: black;
-   padding: 5em;
-text-align: center;
-
-
-
+.formWrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
 }
-.Form button{
-	
-	   cursor: pointer;
-	   color: white;
-	   background-color: black;
-	   font-size: 1.5em;
-	   padding-top:5px;
-	   border-radius: 0.5em;
-	   margin-top:2em;
-	   font-family: 'Indie Flower', cursive;
-	   width:50%;
-	   height:50px;
-	   margin: auto;
-	   
-	   
-	 
- }
 
- form > div {
-   margin-top: 1em;
-   margin-bottom: 2em;
+.Form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80vh;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1em;
+    border-radius: 2%;
+    border: 2px solid #A8682F;
+    background-color: white;
+    color: black;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding: 2em;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: none;
 }
- form input {
-   font-size: 1.1em;
-   border-radius: 0.3em;
-   border-width: 3px;
-   padding-left: 0.5em;
-   width:100%;
-   margin-top: 10px;
+
+.Form button {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    font-size: 1.5em;
+    padding-top: 5px;
+    border-radius: 0.5em;
+    margin-top: 2em;
+    font-family: 'Indie Flower', cursive;
+    width: 50%;
+    height: 50px;
+    margin: auto;
+}
+
+.Form button {
+    background-color: #94C2ED;
+    font-size: 1.2em;
+    border-radius: 0.5em;
+    padding: 0.5em 1.4em;
+    transition: all 1s;
+}
+
+form>div {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+form input {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.1em;
+    border-radius: 0.3em;
+    border-width: 3px;
+    padding-left: 0.5em;
+    clear: both;
 }
 
 form label {
-   font-weight: bold;
-   font-size: 1em;
-   padding:10px;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: right;
 }
-input.valid{
-    border:3px solid #5BBE36;
+
+input.valid {
+    border: 3px solid #5BBE36;
     border-radius: 5px;
 }
 
-input.invalid{
-    border:3px solid #DD2626;
+input.invalid {
+    border: 3px solid #DD2626;
     border-radius: 5px;
 }
 
-.error{
+.error {
     color: #DD2626;
 }
-button.primary{
+
+button.primary {
     padding: 0.3em 1.5em;
-    margin-bottom:0.7em;
+    margin-bottom: 0.7em;
     border: none;
     border-radius: 5px;
     background-color: #17736A;
@@ -75,13 +94,13 @@ button.primary{
     font-family: 'Raleway', sans-serif;
 }
 
-
-button:hover{
+button:hover {
     cursor: pointer;
     transform: scale(1.1, 1.1);
 }
- button:disabled {
-	background-color:#2d4643;
-	color: #f7efef;
-	cursor:auto;
+
+button:disabled {
+    background-color: #2d4643;
+    color: #f7efef;
+    cursor: auto;
 }

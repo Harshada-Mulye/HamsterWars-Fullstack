@@ -5,7 +5,7 @@ const Hamsters = ({ hamster }) => {
   const [selectedItem, setSelectedItem] = useState("");
   const [winnerhamsters, setWinnerHamsters] = useState([])
   const [message,setMessage]=useState("")
-  const[hamsterInfo,setHamsterInfo]=useState("")
+  //const[hamsterInfo,setHamsterInfo]=useState([])
   async function deleteHamster(id) {
     await fetch(`/api/hamsters/${id}`, { method: "DELETE" }).then(() =>
       setState({ status: "Delete successful" })
@@ -29,19 +29,33 @@ const Hamsters = ({ hamster }) => {
   
    }  
 
-  /*const hamster1= winnerhamsters.map(hamster=>hamster.loserId)
-  console.log(hamster1)
-  let response1 = await fetch(`/api/hamsters/${hamster1}`, { method: 'GET' });   
+
+   const hamster1= winnerhamsters.map(hamster=>hamster.loserId)
+    console.log(hamster1)
+    
+
+     
+
+
+}
+
+async function getHamsterWithId(id)
+{
+  let response1 = await fetch(`/api/hamsters/${id}`, { method: 'GET' });   
 
                 const hamster = await response1.json();                
                
                
-                setHamsterInfo(hamster)
+               
 				console.log(hamster)
 
-   console.log(hamsterInfo)*/
+				
+            
+       
+
  }
 
+  
 
 
   function changeSelect() {
@@ -60,6 +74,8 @@ const Hamsters = ({ hamster }) => {
           wins: {hamster.wins} games {hamster.games} defeats {hamster.defeats}
         </li>
 	<li> Defetaers {winnerhamsters.map(hamster=>"\n Id:"+hamster.loserId) }</li>
+
+	
 	<li>{message}</li>
       </ul>
     </div>
