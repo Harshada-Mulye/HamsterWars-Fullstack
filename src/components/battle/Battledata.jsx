@@ -41,7 +41,7 @@ const Battledata =({hamster1,hamster2,fetchData}) =>{
 		const Response = await fetch(`api/hamsters/${id}`, {method: 'PUT', headers: {
 			'Content-type': 'application/json'}, body: JSON.stringify(hamsterChange)});
 		const Data = await Response.text();
-		console.log(Data);
+		//console.log(Data);
         
 	}
 
@@ -51,7 +51,7 @@ async function postMatch(winnerId, loserId) {
 		const Response1= await fetch(`api/matches`, {method: 'POST', headers: {
 			'Content-type': 'application/json'}, body: JSON.stringify(match)});
 		const Data1 = await Response1.text();
-		console.log(Data1);
+		//console.log(Data1);
 		
 	}
 	function popUp() {

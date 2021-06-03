@@ -84,7 +84,7 @@ const Upload = () => {
       wins: 0,
       defeats: 0,
     };
-    console.log("Upload hamster", newHamster);
+    //console.log("Upload hamster", newHamster);
     setHamsterUploaded(`Your  hamster ${name} is ready to battle!`);
 
     const url = "/api/hamsters";

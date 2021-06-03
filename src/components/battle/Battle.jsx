@@ -5,6 +5,33 @@ const Battle = () => {
   const [hamster1, setHamster1] = useState(null);
   const [hamster2, setHamster2] = useState(null);
 
+  /* useEffect(() => {  
+
+       try{
+
+            
+        async function fetchData() {
+         const response = await fetch('/api/hamsters/random', { method: 'GET' })
+			const data = await response.json()
+			// Använd "mountedRef" här
+			setHamster1(data)
+        
+        }
+
+        async function fetchData2() {
+            const data = await fetch('/api/hamsters/random',{ method: 'GET' })
+            const data1 = await data.json()
+            
+            setHamster2(data1)
+        
+        }
+        fetchData()
+        fetchData2()
+        
+        }
+ catch(err){
+            console.error(err);
+            }, [])*/
   useEffect(() => {
     fetchData();
   }, []);

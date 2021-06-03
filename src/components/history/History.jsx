@@ -61,7 +61,7 @@ const History = ({ hamsters }) => {
               return (
                 <li className="hamname" key={match.id}>
                   {match.name}
-                  <br />
+				  <br/>
                   <img
                     src={`/assets/${match.imgName}`}
                     alt={match.name}
@@ -80,7 +80,7 @@ const History = ({ hamsters }) => {
               return (
                 <li key={match.id}>
                   {match.name}
-                  <br />
+				  <br/>
                   <img
                     src={`/assets/${match.imgName}`}
                     alt={match.name}
@@ -96,7 +96,7 @@ const History = ({ hamsters }) => {
             {latestmatches.map((match) => {
               return (
                 <li key={match.id} className="lidelete">
-                  <br />
+					<br/>
                   <span
                     className="deleteCross"
                     onClick={() => deleteMatch(match.id)}
