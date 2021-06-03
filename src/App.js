@@ -50,10 +50,11 @@ function App() {
                     <Route path="/upload"> <Upload/></Route>
                     <Route path="/"> <Home /></Route>
                 </Switch>
-            </main>
-			<div className="footer">
+				<div className="footer">
 		  <Footer />
 	  </div>
+            </main>
+		
     </div>
     </Router>
   );

@@ -1,5 +1,4 @@
 import './Battle.css' 
-import { Link } from 'react-router-dom'
 import BattleResult from './BattleResult'
 import {  useState } from 'react'
 
@@ -58,7 +57,7 @@ async function postMatch(winnerId, loserId) {
 	function popUp() {
 	
         setShowPopUp(true);
-    //  setTimeout(setShowPopUp, 7000);
+      setTimeout(setShowPopUp, 5000);
     }
 	
 
@@ -82,7 +81,7 @@ async function postMatch(winnerId, loserId) {
 	<p>Losses: {hamster1.defeats}</p>*/}
             </div>
 
-			<h1 className ="vsclass"><span className ="glove1">🥊</span>VS <span className ="glove2">🥊</span></h1>
+		{/*	<h1 className ="vsclass"><span className ="glove1">🥊</span>VS <span className ="glove2">🥊</span></h1>*/}
 		<div onClick={() => hamsterVote(hamster2, hamster1)}>
 		<p><span>{hamster2.name}</span></p>
 		   <img src={`/assets/${hamster2.imgName}`} alt={hamster2.imgName} className="random-image"/>
@@ -105,13 +104,13 @@ async function postMatch(winnerId, loserId) {
 			
 			
 			</section>
-		  <div className="buttonwrapper">
-			  <nav>
-		<Link to='/Battle'>
-			 <p onClick={()=>{fetchData();
-			 setShowPopUp(false)}}>Next Battle</p> 
-                </Link>
-				</nav>
+		  <div>
+			 
+		
+			 <button className="primary" onClick={()=>{fetchData();
+			 setShowPopUp(false)}}>Next Battle</button> 
+               
+				
 				</div>
 		 
 		  </section>

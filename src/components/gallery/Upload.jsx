@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Upload.css";
+import { Link } from "react-router-dom";
 
 const Upload = () => {
   //const history = useHistory();
@@ -8,6 +9,8 @@ const Upload = () => {
   const [age, setAge] = useState("");
   const [loves, setLoves] = useState("");
   const [favFood, setFavfood] = useState("");
+  const [imgName, setImgName] = useState("");
+  const [imgTouched, setImgTouched] = useState(false);
   const [nameTouched, setNameTouched] = useState(false);
   const [ageTouched, setAgeTouched] = useState(false);
   const [favoriteFoodTouched, setFavoriteFoodTouched] = useState(false);
@@ -18,6 +21,8 @@ const Upload = () => {
     ? validateFavoriteFood(favFood)
     : ["", ""];
   let [lovesClass, lovesError] = lovesTouched ? validateLoves(loves) : ["", ""];
+  let [imgClass, imgError] = imgTouched ? validateImg(imgName) : ["", ""];  
+
 
   let formIsValid =
     nameTouched &&
@@ -27,6 +32,7 @@ const Upload = () => {
     nameError === "" &&
     ageError === "" &&
     favoriteFoodError === "" &&
+	imgError=== "" &&
     lovesError === "";
 
   function validateName(name) {
@@ -59,6 +65,13 @@ const Upload = () => {
       return ["invalid", `Favourite thing is required`];
     }
   }
+  function validateImg(imgName) {
+    if (imgName.length > 0) {
+      return ["valid", ""];
+    } else {
+      return ["invalid", `Image is required`];
+    }
+  }
 
   async function uploadHamster() {
     const newHamster = {
@@ -66,7 +79,7 @@ const Upload = () => {
       age: Number(age),
       loves: loves,
       favFood: favFood,
-      imgName: "hamster-1.jpg",
+      imgName: imgName,
       games: 0,
       wins: 0,
       defeats: 0,
@@ -83,6 +96,7 @@ const Upload = () => {
     });
 
     console.log(await response.text());
+
   }
 
   return (
@@ -142,8 +156,22 @@ const Upload = () => {
             ></input>
             <div className="error">{favoriteFoodError}</div>
           </div>
+		  <div>
+            <label>Enter Image</label>
+            <input
+              value={imgName}
+              type="text"
+              onChange={(e) => setImgName(e.target.value)}
+              placeholder="Enter image Ex. hamster-1.jpg"
+              onBlur={() => setImgTouched(true)}
+              className={imgClass}
+            ></input>
+            <div className="error">{imgError}</div>
+          </div>
+
         </form>
         <br />
+		<Link to="/Gallery">
         <button
           onClick={(e) => uploadHamster()}
           className="primary"
@@ -151,6 +179,9 @@ const Upload = () => {
         >
           Add new hamster
         </button>
+		</Link>
+	
+
         <p className={hamsterUploaded ? "" : "hide"}>{hamsterUploaded}</p>
       </main>
     </div>
