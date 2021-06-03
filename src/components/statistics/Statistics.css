@@ -1,44 +1,53 @@
 .statWrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    height: 100vh;
-    align-content: center;
-    /*align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  height: 100vh;
+  align-content: center;
+  /*align-items: center;
     /*padding: 60px;*/
-    padding: 50px 150px 50px 150px;
+  padding: 50px 150px 50px 150px;
 }
 
 li {
-    list-style: none;
-    text-align: center;
-    line-height: 50px;
-    color: #f07e0e;
-	font-family: Margarine;
+  list-style: none;
+  text-align: center;
+  line-height: 50px;
+  color: #f07e0e;
+  font-family: Margarine;
 }
 
 ul {
-    border-radius: 2em;
-    /* border: 2px solid #A8682F;*/
-    outline: none;
-    height: 50vh;
-    align-self: start;
-    margin-left: auto;
-    padding-inline-start: 0px;
+  border-radius: 2em;
+  /* border: 2px solid #A8682F;*/
+  outline: none;
+  height: 50vh;
+  align-self: start;
+  margin-left: auto;
+  padding-inline-start: 0px;
 }
 
 .divider {
-    width: 2px;
-    margin: 3px 0;
-    background: #f07e0e;
+  width: 2px;
+  margin: 3px 0;
+  background: #f07e0e;
 }
 
 h1 {
-    background-image: linear-gradient(to left, violet, indigo, green, blue, rgb(27, 27, 18), orange, red);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    color: transparent;
-	font-family: Margarine;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    green,
+    blue,
+    rgb(27, 27, 18),
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: Margarine;
 }
