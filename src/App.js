@@ -51,7 +51,7 @@ function App() {
                     <Route path="/"> <Home /></Route>
                 </Switch>
 				<div className="footer">
-		  <Footer />
+		  {/*<Footer />*/}
 	  </div>
             </main>
 		

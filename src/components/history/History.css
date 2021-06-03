@@ -1,58 +1,86 @@
+
+    /*justify-content: space-between;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    margin-top: -40px;
+}*/
+
 .history-wrapper {
-  display: flex;
-  /*justify-content: space-between;*/
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  margin-top: -80px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.item {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    border: red
+}
+
+.item h2 {
+    font-size: 25px;
 }
 
 .history-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  border: 0.25px solid rgb(255, 255, 255);
-  background-color: #a8682f;
-  padding: 5px;
-  margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: .25px solid rgb(255, 255, 255);
+    background-color: #A8682F;
+    padding: 5px;
+    margin: auto;
+}
+
+.lidelete {
+    /*margin-top: 40px;
+    margin-bottom: 25px;*/
+    margin-left: 20px;
+    height: 120px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.deleteCross {
+    align-items: start;
 }
 
 .VSclass {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 50px;
 }
 
-.deleteMatch {
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-content: center;
-  margin-top: 30px;
+
+/*.deleteMatch {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
 }
 .historyUl {
-  display: grid;
-  grid-template-columns: 2fr;
+    display: grid;
+    grid-template-columns: 2fr;
 }
 .lidelete {
-  margin-top: 18px;
-  cursor: pointer;
-}
-li.hamname {
-  align-items: center;
-  font-family: Margarine;
+    margin-top: 37px;
+    margin-bottom: 15px;
+    margin-left: 20px;
 }
 .latestMatches {
-  margin-top: 50px;
-  margin-bottom: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/*.historyUl li{
-	border-bottom: 5px solid red;
-
+.historyUl li {
+    border-bottom: 5px solid #f07e0e;
 }*/

@@ -31,9 +31,9 @@ const Statistics = () => {
     <div><h1><span>🏆</span>Top five winners</h1>
    
    <ul>
-  {winners.map(winner=> {
+  {winners.map((winner,index)=> {
     return (
-      <li key={winner.id}>
+      <li key={winner.id+index}>
         <span>{winner.name}</span> has won      <span>{winner.wins} </span>  matches
       </li>
     )
@@ -45,9 +45,9 @@ const Statistics = () => {
     <div><h1><span>😞</span>Top five losers</h1>
    
     <ul>
-  {losers.map(loser=> {
+  {losers.map((loser,index)=> {
     return (
-      <li key={loser.id}>
+      <li key={loser.id+index}>
        <span> {loser.name} </span>has lost      <span>{loser.defeats}</span> matches
       </li>
     )

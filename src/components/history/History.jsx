@@ -25,7 +25,7 @@ const History = ({ hamsters }) => {
     const winnerId = match.winnerId;
     tempWinnerId.push(winnerId);
   });
-  console.log("tempWinnerrID", tempWinnerId);
+  //console.log("tempWinnerrID", tempWinnerId);
 
   let winnersInfo = [];
 
@@ -37,7 +37,7 @@ const History = ({ hamsters }) => {
     const loserId = match.loserId;
     tempLoserId.push(loserId);
   });
-  console.log("temLoserId", tempLoserId);
+  //console.log("temLoserId", tempLoserId);
 
   let losersInfo = [];
 
@@ -45,14 +45,14 @@ const History = ({ hamsters }) => {
   async function deleteMatch(id) {
     await fetch(`/api/matches/${id}`, { method: "DELETE" });
 
-    setMatchDeleted(`Your  match ${id} is deleted!`);
+    setMatchDeleted(`Your  match  is deleted!`);
     //alert(" deleted succesfully")
   }
 
   return (
     <section>
       <h1 className="latestMatches">LATEST MATCHES</h1>
-      <p className={matchDeleted ? "" : "hide"}>{matchDeleted}</p>
+     
       <div className="history-wrapper">
         <div className="winner">
           <h1>WINNER</h1>
@@ -61,7 +61,7 @@ const History = ({ hamsters }) => {
               return (
                 <li className="hamname" key={match.id}>
                   {match.name}
-				  <br/>
+                  <br />
                   <img
                     src={`/assets/${match.imgName}`}
                     alt={match.name}
@@ -80,7 +80,7 @@ const History = ({ hamsters }) => {
               return (
                 <li key={match.id}>
                   {match.name}
-				  <br/>
+                  <br />
                   <img
                     src={`/assets/${match.imgName}`}
                     alt={match.name}
@@ -92,11 +92,13 @@ const History = ({ hamsters }) => {
           </ul>
         </div>
         <div>
+        <p className={matchDeleted ? "" : "hide"}>{matchDeleted}</p>
           <ul>
             {latestmatches.map((match) => {
               return (
+                
                 <li key={match.id} className="lidelete">
-					<br/>
+                  <br />
                   <span
                     className="deleteCross"
                     onClick={() => deleteMatch(match.id)}
