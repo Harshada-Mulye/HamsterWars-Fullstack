@@ -27,6 +27,7 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
+		  <div className="webName"><h1>HAMSTERWARS</h1></div>
          
       <nav>
       <NavLink to="/"> Home </NavLink>

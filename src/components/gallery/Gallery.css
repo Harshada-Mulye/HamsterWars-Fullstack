@@ -61,7 +61,7 @@
 }
 
 .upload {
-    float: right;
+    float: left;
     padding-right: 70px;
 	font-family: Margarine;
 }
@@ -77,7 +77,7 @@
     font-weight: 50px;
     /*display: block;*/
     color: rgb(20, 20, 20);
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 1em 0 0.5em;
 	background-image: linear-gradient(to left, violet, indigo, green, blue, rgb(27, 27, 18), orange, red);
     -webkit-background-clip: text;

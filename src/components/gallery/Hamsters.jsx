@@ -65,6 +65,7 @@ const Hamsters = ({ hamster }) => {
   );
   const showImage = (
     <div>
+		<div className="name">{hamster.name}</div>
       <img
         src={`/assets/${hamster.imgName}`}
         alt={hamster.name}

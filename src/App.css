@@ -6,7 +6,7 @@
 }
 
 .App-header {
-    /* background-color: #282c34; */
+    background-color: #b37f52; 
     /* min-height: 100vh; */
     display: flex;
     flex-direction: column;
@@ -22,16 +22,17 @@
 }
 
 header {
-    /* background-color: #8AD2C0;*/
+	
     color: #3B4E49;
     padding: 0.5em;
     flex: 0 0 auto;
+
 
 }
 
 nav a {
     padding: 0.2em 1.5em;
-    color: #3B4E49;
+    color: #1b1a1a;
     transition: background-color 0.3s linear;
     text-decoration: none;
 	font-family: Margarine;
@@ -58,4 +59,10 @@ main {
     overflow: auto;
     background-image: url("../src/backgroundimage.png");
     background-repeat: repeat-y;
+}
+.webName h1{
+	padding: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-style: cursive;
 }

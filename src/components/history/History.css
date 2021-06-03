@@ -6,7 +6,7 @@
 	width:100%;
 	height:100vh;
 	align-items: center;
-	margin-top: -40px;
+	margin-top: -50px;
 	
 
 }
@@ -15,7 +15,7 @@
     width: 40px;
     height: 40px;
     border-radius: 12px;
-    border: .25px solid rgb(255, 255, 255);
+   border: .25px solid rgb(255, 255, 255);
     background-color: #A8682F;
     padding: 5px;
 	margin:auto;
@@ -44,9 +44,9 @@
 
 }
 .lidelete{
-	margin-top:37px;
-	margin-bottom: 15px;
-	margin-left:20px;
+	margin-top:18px;
+	cursor: pointer;
+	
 }
 li.hamname{
 	
@@ -62,7 +62,7 @@ margin-bottom: 0px;
     align-items: center;
     justify-content: center;
 }
-.historyUl li{
+/*.historyUl li{
 	border-bottom: 5px solid red;
 
-}
+}*/
