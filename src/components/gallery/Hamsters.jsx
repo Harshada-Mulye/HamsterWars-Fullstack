@@ -5,12 +5,14 @@ const Hamsters = ({ hamster }) => {
   const [selectedItem, setSelectedItem] = useState("");
   const [winnerhamsters, setWinnerHamsters] = useState([])
   const [message,setMessage]=useState("")
+  const [hamsterDeleted, setHamsterDeleted] = useState('');
   //const[hamsterInfo,setHamsterInfo]=useState([])
   async function deleteHamster(id) {
     await fetch(`/api/hamsters/${id}`, { method: "DELETE" })
     
     
-	alert("Hamster deleted succesfully")
+	//alert("Hamster deleted succesfully")
+	setHamsterDeleted('Hamster  is deleted')
   }
 
   async function matchWinners(id) {
@@ -45,6 +47,7 @@ const Hamsters = ({ hamster }) => {
   }
   const showHamsters = (
     <div>
+		<p className={hamster ? '' : 'hide' }>{hamsterDeleted}</p>
       <ul className="list" 	onMouseEnter={()=>matchWinners(hamster.id)}>
         <li className ="delete"onClick={() => deleteHamster(hamster.id)}>❌</li>
         <li>My Age: {hamster.age}</li>
