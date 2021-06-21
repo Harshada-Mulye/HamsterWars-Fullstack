@@ -1,18 +1,20 @@
 
 
 .random {
-    margin: 5% 10em 9%;
+    margin: 2% 10em 9%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     margin-bottom: auto;
+	margin-top: 2px;
 }
 
 .random h1 {
-    height: 280px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
+	margin-top:5px;
 }
 
 
@@ -22,12 +24,12 @@
 
 .random-image {
     width: 55%;
-    height: 35vh;
+    height: 25vh;
     border-radius: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
     border: 1px solid rgb(255, 255, 255);
     background-color: #f07e0e;
-    padding: 5px;
+    padding: 1px;
 }
 
 span {

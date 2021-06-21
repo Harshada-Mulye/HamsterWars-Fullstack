@@ -11,6 +11,7 @@ const Hamsters = ({ hamster,hamsterList }) => {
 
     //alert("Hamster deleted succesfully")
     setHamsterDeleted("Hamster  is deleted");
+	window.location.reload();
   }
 
   async function matchWinners(id) {
